@@ -30,7 +30,7 @@ Excecute the notebooks in Binder:
 ## Other language versions
 <table>
   <tr>
-   <td><img src='/images/OReilly-english.jpg' width=200></td>
+   <td>![](images/OReilly-english.jpg)<img src='images/OReilly-english.jpg' width=200></td>
   <td><b>English:</b><br>
    Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python<br>
    2020: ISBN 149207294X<br>
@@ -40,7 +40,7 @@ Excecute the notebooks in Binder:
  </tr>
 
  <tr>
-  <td><img src='/images/OReilly-japanese.jpg' width=200></td>
+  <td><img src='images/OReilly-japanese.jpg' width=200></td>
   <td><b>Japanese:</b><br>
    データサイエンスのための統計学入門 第2版 ―予測、分類、統計モデリング、統計的機械学習とR/Pythonプログラミング <br>
    2020: ISBN 487311926X, 
@@ -126,6 +126,8 @@ Therefore, we decided to use a terminal
 - prepare that one with the necessary packages,
 - choose the interpreter from that new environment in PyCharm and
 - remove the old environment in the terminal
+
+#### In the terminal
 ```
 (practical-statistics-for-data-scientists) willem@willem-Latitude-5590:~/resources/git/practical-statistics-for-data-scientists$ conda deactivate
 
@@ -139,6 +141,9 @@ willem@willem-Latitude-5590:~/resources/git/practical-statistics-for-data-scient
 
 (stat4ds) willem@willem-Latitude-5590:~/resources/git/practical-statistics-for-data-scientists$ conda remove --name practical-statistics-for-data-scientists --all
 ```
+#### Selecting the existing (just created on cli) stat4ds env in PyCharm
+![Add the exisiting conda environment](images/AddExistingCondaEnv.png)
+
 
 
 
