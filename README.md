@@ -118,6 +118,29 @@ conda create -n sfds python
 conda activate sfds
 conda env update -n sfds -f environment.yml
 ```
+### Willem's Adjustments to the Anaconda setup
+As we cloned the git repo with PyCharm it already made a Anaconda environment for us with the same name as the git repo: 
+(practical-statistics-for-data-scientists).
+Therefore, we decided to use a terminal 
+- to create a new Anaconda environment with a shorter name, we chose stat4ds,
+- prepare that one with the necessary packages,
+- choose the interpreter from that new environment in PyCharm and
+- remove the old environment in the terminal
+```
+(practical-statistics-for-data-scientists) willem@willem-Latitude-5590:~/resources/git/practical-statistics-for-data-scientists$ conda deactivate
+
+willem@willem-Latitude-5590:~/resources/git/practical-statistics-for-data-scientists$ conda create -n stat4ds python
+
+willem@willem-Latitude-5590:~/resources/git/practical-statistics-for-data-scientists$ conda activate stat4ds
+
+(stat4ds) willem@willem-Latitude-5590:~/resources/git/practical-statistics-for-data-scientists$ conda env update -n stat4ds -f environment.yml
+
+### When that is finished switch to this environments interpreter in PyCharm
+
+(stat4ds) willem@willem-Latitude-5590:~/resources/git/practical-statistics-for-data-scientists$ conda remove --name practical-statistics-for-data-scientists --all
+```
+
+
 
 
 

@@ -1,0 +1,113 @@
+### When creating a new environment from the commandline I was warned that anewe version of Anaconda was available:
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.9.2
+  latest version: 4.10.3
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+### So later in another terminal we followed the instruction and tested it with pyspark in a jupyter notebook
+
+willem@willem-Latitude-5590:~$ conda update -n base -c defaults conda
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/willem/anaconda3
+
+  added / updated specs:
+    - conda
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    backports.functools_lru_cache-1.6.4|     pyhd3eb1b0_0           9 KB
+    backports.tempfile-1.0     |     pyhd3eb1b0_1          11 KB
+    conda-4.10.3               |   py38h06a4308_0         2.9 MB
+    conda-package-handling-1.7.3|   py38h27cfd23_1         884 KB
+    xmltodict-0.12.0           |     pyhd3eb1b0_0          13 KB
+    ------------------------------------------------------------
+                                           Total:         3.8 MB
+
+The following packages will be UPDATED:
+
+  backports.functoo~                             1.6.1-py_0 --> 1.6.4-pyhd3eb1b0_0
+  conda                                4.9.2-py38h06a4308_0 --> 4.10.3-py38h06a4308_0
+  conda-package-han~                   1.7.2-py38h03888b9_0 --> 1.7.3-py38h27cfd23_1
+
+The following packages will be DOWNGRADED:
+
+  backports.tempfile                               1.0-py_1 --> 1.0-pyhd3eb1b0_1
+  xmltodict                                     0.12.0-py_0 --> 0.12.0-pyhd3eb1b0_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+conda-4.10.3         | 2.9 MB    | ################################################################################################# | 100%
+xmltodict-0.12.0     | 13 KB     | ################################################################################################# | 100%
+backports.tempfile-1 | 11 KB     | ################################################################################################# | 100%
+backports.functools_ | 9 KB      | ################################################################################################# | 100%
+conda-package-handli | 884 KB    | ################################################################################################# | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+willem@willem-Latitude-5590:~$ cd Documents/zakelijk/financieel/ING/transacties/
+willem@willem-Latitude-5590:~/Documents/zakelijk/financieel/ING/transacties$ conda activate base
+(base) willem@willem-Latitude-5590:~/Documents/zakelijk/financieel/ING/transacties$ pyspark
+[TerminalIPythonApp] WARNING | Subcommand `ipython notebook` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter notebook` in the future
+[I 17:58:41.871 NotebookApp] JupyterLab extension loaded from /home/willem/anaconda3/lib/python3.8/site-packages/jupyterlab
+[I 17:58:41.871 NotebookApp] JupyterLab application directory is /home/willem/anaconda3/share/jupyter/lab
+[I 17:58:41.873 NotebookApp] Serving notebooks from local directory: /home/willem/Documents/zakelijk/financieel/ING/transacties
+[I 17:58:41.873 NotebookApp] Jupyter Notebook 6.1.4 is running at:
+[I 17:58:41.873 NotebookApp] http://localhost:8888/?token=0c094749c494552ac01a6ccb6ddefa1420c457edf3ac1158
+[I 17:58:41.873 NotebookApp]  or http://127.0.0.1:8888/?token=0c094749c494552ac01a6ccb6ddefa1420c457edf3ac1158
+[I 17:58:41.873 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 17:58:41.890 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///home/willem/.local/share/jupyter/runtime/nbserver-6587-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=0c094749c494552ac01a6ccb6ddefa1420c457edf3ac1158
+     or http://127.0.0.1:8888/?token=0c094749c494552ac01a6ccb6ddefa1420c457edf3ac1158
+[I 17:58:49.076 NotebookApp] Kernel started: 3100ea96-13a3-4864-9eb4-63c339aff849, name: python3
+21/10/15 17:58:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[I 17:59:07.650 NotebookApp] Starting buffering for 3100ea96-13a3-4864-9eb4-63c339aff849:089ce21cbb1041658e8fbb3027c7ddfe
+[I 17:59:08.366 NotebookApp] Kernel restarted: 3100ea96-13a3-4864-9eb4-63c339aff849
+[I 17:59:08.389 NotebookApp] Restoring connection for 3100ea96-13a3-4864-9eb4-63c339aff849:089ce21cbb1041658e8fbb3027c7ddfe
+[I 17:59:08.389 NotebookApp] Replaying 3 buffered messages
+21/10/15 17:59:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[I 18:00:49.090 NotebookApp] Saving file at /NL79INGB0004951418_2020.ipynb
+[I 18:01:43.892 NotebookApp] Saving file at /NL79INGB0004951418_2020.ipynb
+[I 18:01:51.160 NotebookApp] Starting buffering for 3100ea96-13a3-4864-9eb4-63c339aff849:089ce21cbb1041658e8fbb3027c7ddfe
+[I 18:01:51.165 NotebookApp] Kernel shutdown: 3100ea96-13a3-4864-9eb4-63c339aff849
+^C[I 18:01:58.868 NotebookApp] interrupted
+Serving notebooks from local directory: /home/willem/Documents/zakelijk/financieel/ING/transacties
+0 active kernels
+Jupyter Notebook 6.1.4 is running at:
+http://localhost:8888/?token=0c094749c494552ac01a6ccb6ddefa1420c457edf3ac1158
+ or http://127.0.0.1:8888/?token=0c094749c494552ac01a6ccb6ddefa1420c457edf3ac1158
+Shutdown this notebook server (y/[n])? y
+[C 18:02:01.526 NotebookApp] Shutdown confirmed
+[I 18:02:01.527 NotebookApp] Shutting down 0 kernels
+[I 18:02:01.527 NotebookApp] Shutting down 0 terminals
+(base) willem@willem-Latitude-5590:~/Documents/zakelijk/financieel/ING/transacties$ conda --version
+conda 4.10.3
+(base) willem@willem-Latitude-5590:~/Documents/zakelijk/financieel/ING/transacties$
+
