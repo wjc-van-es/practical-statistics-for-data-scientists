@@ -8,6 +8,7 @@ def dataDirectory(dataDirectoryName='data'):
     We assume that the data folder is locate in a parent directory of this file and named 'data'.
     If your setup is different, you will need to change this method.
     """
+    print(f" __file__ is the absolute path to the current python code file containing the reference, hence\n{__file__}")
     dataDir = Path(__file__).resolve().parent
     while not list(dataDir.rglob('data')):
         dataDir = dataDir.parent
@@ -17,4 +18,4 @@ def dataDirectory(dataDirectoryName='data'):
     return found[0]
     
     
-    
+print(dataDirectory())
